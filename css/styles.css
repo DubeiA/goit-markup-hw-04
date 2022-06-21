@@ -94,6 +94,7 @@ img {
 
 
 .link-decor {
+	
 	text-decoration: none;
 	
 }
@@ -115,21 +116,60 @@ img {
 }
 .main-contacts {
 	display: flex;
-
 	margin-left: auto;
+	
 }
+
+/* .icon-mail {
+
+} */
 .main-contacts .decor-contacts + .decor-contacts { 
 	margin-left: 50px;
 }
-.header-nav {
+
+.decor-contacts {
 	display: flex;
 	align-items: center;
 	
 }
 
+/* 
+.icon-mail {
+	background-image: url(../images/icons.svg/envelope.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.icon-phone {
+	background-image: url(../images/icons.svg/smartphone.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+} */
+
+
+.header-nav {
+	display: flex;
+	align-items: center;
+}
+
 
 .nav .list-link +.list-link { 
 	margin-left: 50px;
+}
+
+/* --------------------------Icons nav------------------------ */
+
+.icon-mail { 
+	width: 16px;
+	height: 12px;
+	margin-right: 10px;
+}
+
+.icon-phone { 
+	width: 10px;
+	height: 16px;
+	margin-right: 10px;
+
 }
 
 /* ----------------------------LOGO ------------------------*/
@@ -193,10 +233,13 @@ img {
 	color: var(--main-secondary-color);
 }
 .contacts {
+	display: flex;
+	align-items: center;
 	padding: 32px 0 ;
 	font-weight: 500;
 	line-height: 1.14px;
 	letter-spacing: 0.02em;
+	
 }
 
 .contacts:hover,
@@ -260,10 +303,20 @@ img {
 	padding-top: 200px;
 	padding-bottom: 200px;
 
+	max-width: 1600px;
+	height: 600px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	background-image: linear-gradient(rgba(47,48,58,0.4), rgba(47,48,58,0.4)), 
+	url(../images/hero.jpg);
+
+	background-position: center;
 	background-color: var(--heder-backg-color);
 
-}
 
+}
 
 /*-------------------------------------- second-hero ------------------------*/
 
@@ -282,9 +335,43 @@ img {
 	display: flex;
 	
 }
-/* .first-item { 
-	margin-right: 30px;
-} */
+.first-item::before { 
+	display: block;
+	content: "" ;
+	width: 270px;
+	height: 120px;
+	background-color: #F5F4FA ;
+	border-radius: 4px;
+	margin-bottom: 30px;
+	
+}
+
+.icon-antenna::before {
+	background-image: url(../images/antenna.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.icon-clock::before {
+	background-image: url(../images/clock.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-diagrama::before {
+	background-image: url(../images/diagram.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon-astrounaut::before {
+	background-image: url(../images/astronaut.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
 .first-list .first-item + .first-item {
 	margin-left: 30px;
 }
@@ -362,11 +449,48 @@ img {
 }
 
 .team-decor { 
-	
 	padding: 30px 0;
 }
 
+.icon-team { 
+	display:flex;
+	justify-content: center;
+	margin-top: 16px;
+	/* border: 1px solid blue; */
 
+}
+.icon-team .icon-instagram + .icon-instagram {
+	margin-left: 30px;
+
+}
+
+.icon-team-decor{ 
+	width: 20px;
+	height: 20px;
+
+}
+/* --------------------------  Clients------------------------------ */
+
+.clients { 
+	display: flex;
+	padding: 0;
+	margin: 0;
+	gap: 30px;
+
+}
+.icon-clients {
+
+	border: 1px solid #AFB1B8;
+	border-radius: 4px;
+
+
+}
+
+.icon-company { 
+	width:  170px;
+	height: 92px;
+	padding: 16px 32px;
+}
 /*------------------------------------ параграфи (Р)----------------------------*/
 
 
