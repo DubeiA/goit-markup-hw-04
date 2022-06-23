@@ -21,6 +21,7 @@ html {
 	--border-line: #ECECEC;
 	--contact-footer: rgba(255, 255, 255, 0.6);
 	--border-color: #EEEEEE;
+	--client-color: #AFB1B8;
 }
 
 body {
@@ -165,14 +166,14 @@ img {
 
 
 .icon-mail { 
-	fill: var(--main-secondary-color);
+	fill: currentColor;
 	width: 16px;
 	height: 12px;
 	margin-right: 10px;
 }
 
 .icon-phone { 
-	fill: var(--main-secondary-color);
+	fill: currentColor;
 	width: 10px;
 	height: 16px;
 	margin-right: 10px;
@@ -236,9 +237,6 @@ img {
 
 /* ------------------------------- contacts ----------------------*/
 
-.main-contacts .contacts {
-	color: var(--main-secondary-color);
-}
 .contacts {
 	display: flex;
 	align-items: center;
@@ -246,6 +244,7 @@ img {
 	font-weight: 500;
 	line-height: 1.14px;
 	letter-spacing: 0.02em;
+	color: var(--main-secondary-color);
 	
 }
 
@@ -321,6 +320,8 @@ img {
 
 	background-position: center;
 	background-color: var(--heder-backg-color);
+	background-repeat: no-repeat;
+	background-size: cover;
 
 
 }
@@ -384,16 +385,23 @@ img {
 
 
 /*---------------------------------------SVG - icon-------------------------------  */
-
-.icon-antenna { 
-	width: 270px;
-	height: 120px;
-	display: inline-block;
-	background-color: var(--secondary-section-color);
-	padding: 25px;
+.decor-about-icon { 
+	text-align: center;
 	margin-bottom: 30px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: var(--secondary-section-color);
+	border-radius: 4px;
 	
 }
+
+.icon-antenna { 
+	width: 70px;
+	height: 70px;
+
+}
+
+
 
 
 
@@ -480,68 +488,69 @@ img {
 }
 
 
-.link-icon-team { 
-	display: flex
-	
-}
 .link-icon-team {
-	fill: #afb1b8;
+	display: flex;
+	color: #afb1b8;
+	padding: 12px;
+	border-radius: 50%;
 }
 
 
 .link-icon-team:hover,
 .link-icon-team:focus {
 	background-color: #2196f3;
-	border-radius: 50%;
-	fill: var(--main-backg-color);
+	
+	color: var(--main-backg-color);
 	
 }
 
 .icon-team-decor{ 
-	
-	padding: 12px;
-	width: 44px;
-	height: 44px;
+	fill: currentColor;
+	width: 20px;
+	height: 20px;
 
 }
 /* --------------------------  Clients------------------------------ */
 
 .clients { 
 	display: flex;
-	padding: 0;
-	margin: 0;
-	gap: 30px;
-	
-
 }
 
-.link-clients .icon-company:hover,
-.link-clients .icon-company:focus {
-	fill: #2196f3;
+.icon-clients:not(:last-child) {
+	margin-right: 30px;
 }
-.icon-clients {
 
-	border: 1px solid #AFB1B8;
+.link-clients { 
+	display: flex;
+	padding:  16px 32px ;
+	border: 1px solid var(--client-color);
 	border-radius: 4px;
-
+	color: var(--client-color);
+	
 }
 
-.icon-clients:hover,
-.icon-clients:focus {
-	border-color: #2196f3;
+.link-clients:hover,
+.link-clients:focus {
+	color: var(--hover-color);
+}
+
+.link-clients:hover,
+.link-clients:focus {
+	border-color: var(--hover-color);
 }
 
 .icon-company { 
-	fill: #afb1b8;
-	width:  170px;
-	height: 92px;
-	padding: 16px 32px;
+	fill: currentColor;
+	width:  106px;
+	height: 60px;
+	
 }
 /*------------------------------------ параграфи (Р)----------------------------*/
 
 
 .main-content {
 	line-height: 1.71;
+	color: var(--main-secondary-color);
 }
 .second-content {
 
@@ -564,6 +573,7 @@ img {
 
 .footer-flex { 
 	display: flex;
+	align-items: baseline;
 }
 
 .decor-address {
@@ -637,9 +647,7 @@ img {
 }
 
 .social { 
-	padding-top: 12px;
 	margin-left: 70px;
-	
 
 }
 
@@ -650,8 +658,20 @@ img {
 }
 
 .white-icon-footer .icon-team-decor { 
-	fill: var(--main-backg-color);
+	color: var(--main-backg-color);
+	
 }
+.white-icon-footer:not(:last-child) {
+	margin-right: 10px;
+}
+
+.link-icon-footer {
+	background-color: rgba(255, 255, 255, 0.1);
+	
+}
+
+
+
 
 
 /* ----------------------------------------------------PORTFOLIO -------------------------------------------------- */
@@ -709,33 +729,13 @@ img {
 	
 }
 
-/* .btn-one {
-    
-}
-
-.btn-two {
-    
-}
-
-.btn-three {
-    
-}
-
-.btn-four {
-   
-}
-
-.btn-five {
-  
-} */
-
 
 /*--------------------------------------- group-proposition ----------------------------*/
 
 .proposition {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	/* gap: 30px; */
 }
 .decor-text {
 	padding: 20px 24px;
@@ -746,20 +746,20 @@ img {
 
 .proposition-decor {
 	
-	margin-right: calc(100% -  2 * 30px) / 3;
-	/*----------------------------------------------------------- Варіант Flex-box #2 --------------------------- */
-	/* margin-right: 30px;
-	margin-bottom: 30px; */
-	/* border: 1px solid #EEEEEE; */
+	/* margin-right: calc(100% -  2 * 30px) / 3; */
+	/*-------------------------------------- Варіант Flex-box #2 --------------------------- */
+	 margin-right: 30px;
+	margin-bottom: 30px; 
+	
 }
 
-/* .proposition-decor:nth-child(3n) {
+.proposition-decor:nth-child(3n) {
 	margin-right: 0;
 }
 
 .proposition-decor:nth-last-child(-n + 3) {
 	margin-bottom: 0;
-} */
+}
 
 
 /*------------------------------------- portfolio-title -----------------------------------*/
@@ -779,10 +779,10 @@ img {
 /*------------------------------------ list proposition ---------------------------------------*/
 
 .portfolio-list {
-
+	display: block;
 	text-decoration: none;
 }
-.proposition-decor:hover,
-.proposition-decor:focus {
+.portfolio-list:hover,
+.portfolio-list:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
