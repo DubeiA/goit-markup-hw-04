@@ -230,7 +230,7 @@ img {
 	color: var(--hover-color);
 }
 
-.link-active:visited {
+.nav .link-active{
 	color: var(--hover-color);
 }
 
